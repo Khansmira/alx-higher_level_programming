@@ -18,9 +18,9 @@ class Square(square1):
         """initializing square
 
         Args:
-            size (int): the size of the square passed; set to 0
+            size (int): the size of the square passed. dafault value 0
 
-        Errors:
+        Raises:
             TypeError: size must be an integer
             ValueError: size must be >= 0
         """
@@ -28,6 +28,10 @@ class Square(square1):
         self.__size = square1.__size
 
         if type(square1.__size) is not int:
-            raise TypeError('size must be an integer')
+            print("size must be an integer", end="")
+            raise TypeError
         elif square1.__size < 0:
-            raise ValueError('size must be >= 0')
+            print("size must be >= 0", end="")
+            raise ValueError
+        else:
+            self.__size = size
