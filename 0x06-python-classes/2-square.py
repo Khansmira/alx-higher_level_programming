@@ -8,7 +8,7 @@ private instance attribute: size
 square1 = __import__("1-square").Square
 
 
-class Square(square1.Square):
+class Square(square1):
     """ a class that defines a Square
     Args:
         square1 (class): a class which defines a Square with private attribute size
