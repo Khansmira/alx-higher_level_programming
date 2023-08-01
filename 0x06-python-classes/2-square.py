@@ -4,6 +4,7 @@ a class that defines a Square
 private instance attribute: size
 """
 
+
 square1 = __import__("1-square").Square
 
 
@@ -17,13 +18,13 @@ class Square(square1.Square):
         """initializing square
 
         Args:
-            size: the size of the square passed; set to 0
+            size (int): the size of the square passed; set to 0
 
         Errors:
             TypeError: size must be an integer
             ValueError: size must be >= 0
         """
-        self.__size = size
+        square1.__size = size
         self.__size = square1.__size
 
         if type(square1.__size) is not int:
