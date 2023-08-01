@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-"""
-This is documentation for the module for this task
+"""0-square.py
+    This a simple class to define Square
 """
 
+
 class Square:
-""" This is a class that defines a Square """
+    """
+        This is the class with only pass
+    """
     pass
