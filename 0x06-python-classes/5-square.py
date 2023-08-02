@@ -1,26 +1,17 @@
 #!/usr/bin/python3
-""" a class that defines a square
-
-private instance: size
-public method: area
-
-property: size getter
-"""
+""" a class that defines  square with private instance """
 
 
 class Square():
-    """
-    Args:
-        square1 (class): a class that defines a square with size and area
-    """
+    """ calculates area of the square and defines private instance size """
 
     def __init__(self, size=0):
         """initializing size
 
-        Args:
-            size (int): the size of the square passed. Default value  0
+            Args:
+            size (int): the size of the square passed. Defaults to 0.
 
-        Raises:
+        exceptions:
             TypeError: size must be an integer
             ValueError: size must be >= 0
         """
@@ -44,14 +35,14 @@ class Square():
         """Setter for size
 
         Args:
-            value (int): a new size value
+            value: a new size value of type int
 
-        Raises:
+        exceptions:
             TypeError: if not integer
             ValueError: if < 0
         """
 
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError('size must be an integer')
         elif value < 0:
             raise ValueError('size must be >= 0')
@@ -59,9 +50,18 @@ class Square():
         self.__size = value
 
     def area(self):
-        """ finding the area of the square
+        """ finds area of the square
 
         Returns:
             int: the are of the square
         """
         return (self.__size**2)
+
+    def my_print(self):
+        """printing the square"""
+        if self.__size == 0:
+            print()
+        for i in range(self.__size):
+            for j in range(self.__size):
+                print('#', end="")
+            print()
