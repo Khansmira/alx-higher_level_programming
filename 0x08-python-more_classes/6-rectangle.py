@@ -8,6 +8,8 @@ class Rectangle:
     """
     A Rectangle
     """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         if type(width) != int:
             raise TypeError("width must be an integer")
@@ -20,6 +22,7 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
         self.__height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -70,3 +73,28 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
+
+    def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ""
+
+        rect = ""
+        for i in range(self.__height):
+            for x in range(self.__width):
+                rect += "#"
+            if i != self.__height - 1:
+                rect = rect + "\n"
+        return rect
+
+    def __repr__(self):
+        """
+        Returns the string representation of Rectangle
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """
+        Prints Rectangle delete message
+        """
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
