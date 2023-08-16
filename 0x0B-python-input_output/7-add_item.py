@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Adds all argument to a python list + saves to file.
+Adds all argument to a python list and saves to file.
 """
 import sys
 import json
