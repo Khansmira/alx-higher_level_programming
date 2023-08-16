@@ -1,16 +1,23 @@
 #!/usr/bin/python3
 """
-This script reads from standard input and calculates metrics.
+This script reads from standard input and calculates metrics
 """
 
+
+
 def display_metrics(total_file_size, status_code_counts):
+
     """Print accumulated metrics."""
+
     print("Total file size: {}".format(total_file_size))
     for code in sorted(status_code_counts):
         print("{}: {}".format(code, status_code_counts[code]))
 
+
+
 if __name__ == "__main__":
     import sys
+
 
     total_file_size = 0
     status_code_counts = {}
