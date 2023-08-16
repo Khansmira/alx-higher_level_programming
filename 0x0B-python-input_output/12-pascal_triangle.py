@@ -3,6 +3,8 @@
 This function defines a Pascal's Triangle
 """
 
+
+
 def pascal_triangle(n):
     """
     Generate Pascal's triangle up to the specified number of rows.
@@ -13,6 +15,7 @@ def pascal_triangle(n):
     Returns:
         list: List of lists representing Pascal's triangle.
     """
+
     if n <= 0:
         return []
 
