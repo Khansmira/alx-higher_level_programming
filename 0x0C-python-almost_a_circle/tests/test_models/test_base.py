@@ -107,6 +107,7 @@ class test_base(unittest.TestCase):
         json_string = Base.to_json_string([])
         self.assertEqual(json_string, "[]")
 
+
 class TestSquare(unittest.TestCase):
     """
     class for testing Base class' methods
