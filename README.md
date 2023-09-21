@@ -1,1 +1,1 @@
-ALX Higher Level Programming Projects completed by me
+# Repository for ALX Sprint 2 (July, 2023)
