@@ -12,10 +12,10 @@ class Rectangle {
     let printRow = '';
     let i = 0;
     let j = 0;
-    for (i < this.width; i++) {
+    for (; i < this.width; i++) {
       printRow = printRow + 'X';
     }
-    for (j < this.height; j++) {
+    for (; j < this.height; j++) {
        console.log(printRow);
      }
   }
