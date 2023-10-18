@@ -23,12 +23,8 @@ function concatFiles (pathA, pathB, pathC) {
       files.writeFile(pathC, concatData, 'utf8', (err) => {
         if (err) {
 	  console.error(err);
-          return;
 	}
-	console.log(`Files concatenated and saved to ${pathC}`);
       });
     });
   });
-}
-
-concatFiles(pathA, pathB, pathC);
+    concatFiles(pathA, pathB, pathC);
