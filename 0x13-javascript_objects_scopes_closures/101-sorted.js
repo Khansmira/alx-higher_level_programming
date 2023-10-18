@@ -8,7 +8,7 @@ for (const userId in dict) {
   const key = dict[userId];
 
   if (!newDict[key]) {
-  newDict[key] = []
+  newDict[key] = [];
   }
 
   newDict[key].push(userId);
