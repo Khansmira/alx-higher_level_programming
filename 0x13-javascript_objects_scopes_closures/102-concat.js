@@ -30,3 +30,5 @@ function concatFiles (pathA, pathB, pathC) {
     });
   });
 }
+
+concatFiles(pathA, pathB, pathC);
