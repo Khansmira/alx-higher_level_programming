@@ -9,18 +9,11 @@ class Square extends square {
 
   charPrint (c) {
     if (c === undefined) {
-      c = 'X';
+      this.print();
     } else {
-      let printRow = '';
-      let i = 0;
-      let j = 0;
-      for (; i < this.width; i++) {
-        printRow = printRow + c;	    
-      for (; j < this.height; j++) {
-        console.log(printRow);
-      }
+      for (let i = 0; i < this.height; i++) console.log(c.repeat(this.width));
     }
   }
-}
+};
 
 module.exports = Square
