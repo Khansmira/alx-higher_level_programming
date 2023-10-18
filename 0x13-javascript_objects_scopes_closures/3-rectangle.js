@@ -8,16 +8,12 @@ class Rectangle {
     }
   }
   
-  print () {
-    let printRow = '';
-    let i = 0;
-    let j = 0;	  
-    while (i < this.width) {
-      i++;
+  print () {	  
+    let printRow = '';	  
+    for(let i = 0; < this.width; i++) {
       printRow = printRow + 'X';
     }
-     while (j < this.height) {
-       j++;
+    for (let j = 0; j < this.height; j++) {
        console.log(printRow);
      }
   }
