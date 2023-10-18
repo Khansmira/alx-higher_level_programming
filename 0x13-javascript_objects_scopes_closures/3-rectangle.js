@@ -11,11 +11,11 @@ class Rectangle {
   print () {
     let printRow = '';
     let i = 0;
+    let j = 0;	  
     while (i < this.width) {
       i++;
-      printRow += 'X';
+      printRow = printRow + 'X';
     }
-     let j = 0;	  
      while (j < this.height) {
        j++;
        console.log(printRow);
