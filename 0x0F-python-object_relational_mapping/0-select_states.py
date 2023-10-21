@@ -5,18 +5,11 @@ This script lists all states from the database hbtn_0e_0_usa.
 import MySQLdb
 from sys import argv
 
-def main():
-    """Lists states from hbtn_0e_0_usa
-    """
-    MY_HOST = 'localhost'
-    MY_PORT = 3306
-    MY_USER = sys.argv[1]
-    MY_PASS = sys.argv[2]
-    MY_DB = sys.argv[3]
+if __name__ == '__main__':
     
     """Connect to the MySQL database
     """
-    db = MySQLdb.connect(host=MY_HOST, port=MY_PORT, user=MY_USER, passwd=MY_PASS, db=MY_DB)
+    db_connect = MySQLdb.connect(host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
     cur = db.cursor()
     
     """Execute the SQL query to retrieve states in ascending order by states.id
@@ -33,6 +26,3 @@ def main():
     """
     cur.close()
     db.close()
-
-if __name__ == "__main__":
-        main()
