@@ -5,8 +5,8 @@ This script lists all states from the database hbtn_0e_0_usa.
 """
 
 
-import MySQLdb
 from sys import argv
+import MySQLdb
 
 if __name__ == '__main__':
     
@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute("SELECT * FROM states ORDER BY ststes.id ASC")
 
     """
     Fetch and Display all the results
