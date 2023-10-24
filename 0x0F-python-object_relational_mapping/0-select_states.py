@@ -3,9 +3,8 @@
 This script lists all states from the database hbtn_0e_0_usa.
 """
 
-
-from sys import argv
 import MySQLdb
+from sys import argv
 
 if __name__ == '__main__':
     """
@@ -15,7 +14,7 @@ if __name__ == '__main__':
 
     cur = db_connect.cursor()
 
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
 
     rows = cur.fetchall()
 
